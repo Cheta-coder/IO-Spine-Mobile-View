@@ -52,15 +52,16 @@ table {
     background-color: #A11E1E;
 }
 
+.picture{
+	width: 100%;
+}
+
 .fa-sharp{
 	float: right;
 	margin: 5% 5% 5% 0;
 	font-size: large;
 }
 
-.picture{
-    width: 100%;
-}
 
 .body-div{
 	font-family: 'Inter', sans-serif;
@@ -185,9 +186,25 @@ ul>li{
 	border: 25px solid rgb(255, 196, 0);
 }
 
+
 .footer{
 	background-color: black;
 	color: white;
-	padding: 5% 0 5% 5%;
+	padding: 5% 0 10% 0;
+	width: 100%;
+}
+.footer nav p{
+	margin: 5% 0 3% 5%;
+}
+
+.ul li{
+	margin: 0 0 0 5%;
+	list-style-type: none;
+}
+
+.line{
+	width: 90%;
+	border-bottom: 1px solid #d9d9d9;
+	margin: 23% 0 2% 5%;
 }
 
