@@ -1,18 +1,19 @@
 import { ourServices } from "./data.js";
+console.log(ourServices)
 
 let mobile = document.querySelector('.mobile-navigation')
 let closeIcon = document.querySelector('.fa-xmark')
 let hamburgerIcon = document.querySelector('.fa-bars');
+mobile.style.visibility = 'hidden';
 let ul = document.querySelector('.top-nav-ul');
 let p1 = document.querySelector('.p1')
 let p2 = document.querySelector('.p2')
 let p3 = document.querySelector('.p3')
 let p4 = document.querySelector('.p4')
-let ourServices = document.querySelector('#ourServices')
-let filtered = document.querySelector('#filter')
-filteredArray = {}
-actualServices = ourServices
-mobile.style.visibility = 'hidden';
+let servicesSection = document.querySelector('#ourServices')
+let filteredSearch = document.querySelector('#filter')
+let filteredArray = []
+let actualServices = ourServices
 
 
 hamburgerIcon.addEventListener('click', function appear(){
@@ -58,22 +59,22 @@ p4.innerHTML = text4
 
 //run the map function to populate the service section of the HTML
 let serviceMap = () => {
-    if(filtered.value === '') actualService = services;
+    if(filteredSearch.value === '') actualServices = ourServices;
     console.log('I ran it')
-    actualServices.map((service) => {
+    actualServices.map((ourServices) => {
 
         let div = document.createElement('div');
 
         let img = document.createElement('img');
-        img.setAttribute('src',service.image)
+        img.setAttribute('src',ourServices.image)
         
         let h3 = document.createElement('h3');
         h3.setAttribute('class','service-title');
-        h3.innerText = service.title;
+        h3.innerText = ourServices.title;
         
         let para = document.createElement('p');
         para.setAttribute('class','service-description');
-        para.innerText = service.desc;
+        para.innerText = ourServices.desc;
         
         let button1 = document.createElement('button');
         button1.setAttribute('class','learn-more');
@@ -89,9 +90,7 @@ let serviceMap = () => {
         
         div.append(img,h3,para);
         
-        service.button ? div.append(button1,button2) : div.appendChild(button3);
-        
-                
+        ourServices.button ? div.append(button1,button2) : div.appendChild(button3);                
         servicesSection.appendChild(div)        
     });
            
@@ -99,15 +98,15 @@ let serviceMap = () => {
 
 serviceMap();
 
-filterSearch.addEventListener("keyup",() => {
+filteredSearch.addEventListener("keyup",() => {
    filteredArray = [];
    servicesSection.innerHTML = '';
-    actualService.filter((service) => {
+    actualServices.filter((ourServices) => {
         
-        if(filterSearch.value !== ''){
-            if(service.title.includes(filterSearch.value) || service.desc.includes(filterSearch.value)){
+        if(filteredSearch.value !== ''){
+            if(ourServices.title.includes(filteredSearch.value) || ourServices.desc.includes(filteredSearch.value)){
                 // push it to the array holding filtered values
-                filteredArray = [...filteredArray,service]
+                filteredArray = [...filteredArray,ourServices]
             }
         }
         // append services to the div
@@ -115,13 +114,13 @@ filterSearch.addEventListener("keyup",() => {
     })
     if(filteredArray.length === 0) serviceMap();
 
-    if(filteredArray.length !== 0 && filterSearch.value !== ''){
-        actualService = filteredArray;
+    if(filteredArray.length !== 0 && filteredSearch.value !== ''){
+        actualServices = filteredArray;
         console.log("filtered map")
         serviceMap();
     }
     // console.log(filteredArray)
-    if(filteredArray.length === 0 && filterSearch.value !== ''){
+    if(filteredArray.length === 0 && filteredSearch.value !== ''){
         let paragraph = document.createElement('p');
         paragraph.innerHTML = 'no services found';
         servicesSection.appendChild(paragraph);
