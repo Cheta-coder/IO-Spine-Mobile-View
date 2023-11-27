@@ -13,6 +13,7 @@ let servicesSection = document.querySelector('#ourServices')
 let filteredSearch = document.querySelector('#filter')
 let filteredArray = []
 let actualServices = ourServices
+let info = document.getElementById('info');
 
 
 hamburgerIcon.addEventListener('click', function appear(){
@@ -34,13 +35,9 @@ for the best talents and request for affordable ICT solutions from our network o
 ... manifest your dreams"
 
 let text1 = about.slice(0, 107)
-console.log(text1)
 let text2 = about.slice(107, 221)
-console.log(text2)
 let text3 = about.slice(221, -24)
-console.log(text3)
 let text4 = about.slice(-24, )
-console.log(text4)
 
 p1.innerHTML = text1
 p2.innerHTML = text2
@@ -50,7 +47,6 @@ p4.innerHTML = text4
 //run the map function to populate the service section of the HTML
 let serviceMap = () => {
     if(filteredSearch.value === '') actualServices = ourServices;
-    console.log('I ran it')
     actualServices.map((ourServices) => {
 
         let div = document.createElement('div');
@@ -97,6 +93,7 @@ filteredSearch.addEventListener("keyup",() => {
             if(ourServices.title.includes(filteredSearch.value) || ourServices.desc.includes(filteredSearch.value)){
                 // push it to the array holding filtered values
                 filteredArray = [...filteredArray,ourServices]
+                info.innerHTML = ""
             }
         }
         // append services to the div
@@ -106,13 +103,11 @@ filteredSearch.addEventListener("keyup",() => {
 
     if(filteredArray.length !== 0 && filteredSearch.value !== ''){
         actualServices = filteredArray;
-        console.log("filtered map")
+        info.innerHTML = ""
         serviceMap();
     }
     if(filteredArray.length === 0 && filteredSearch.value !== ''){
-        let paragraph = document.createElement('p');
-        paragraph.setAttribute('id', 'info')
-        paragraph.innerHTML = 'no services found';
-        servicesSection.appendChild(paragraph);
+        info.innerHTML = 'no services found';
+        return
     } 
 })
