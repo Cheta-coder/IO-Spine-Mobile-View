@@ -127,6 +127,13 @@ h1{
 	color: #A11E1E;
 }
 
+#info{
+	position: absolute;
+	top: 90%;
+	color: #A11E1E;
+	font-size: larger;
+	font-weight: bolder;
+}
 .service div img{
 	background-color: none;
 }

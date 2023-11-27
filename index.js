@@ -1,5 +1,4 @@
 import { ourServices } from "./data.js";
-console.log(ourServices)
 
 let mobile = document.querySelector('.mobile-navigation')
 let closeIcon = document.querySelector('.fa-xmark')
@@ -21,7 +20,6 @@ hamburgerIcon.addEventListener('click', function appear(){
     mobile.style.width = '70%'
 })
 
-
 closeIcon.addEventListener('click', () => {
     mobile.style.visibility = 'hidden';
 })
@@ -34,8 +32,6 @@ Learn with the best, buy the best and reliable products born out of \
 innovations, position yourself for the global market place or source \
 for the best talents and request for affordable ICT solutions from our network of technologies.\
 ... manifest your dreams"
-
-console.log(about)
 
 let text1 = about.slice(0, 107)
 console.log(text1)
@@ -50,12 +46,6 @@ p1.innerHTML = text1
 p2.innerHTML = text2
 p3.innerHTML = text3
 p4.innerHTML = text4
-
-
-
-
-
-// 29/09/2023
 
 //run the map function to populate the service section of the HTML
 let serviceMap = () => {
@@ -119,9 +109,9 @@ filteredSearch.addEventListener("keyup",() => {
         console.log("filtered map")
         serviceMap();
     }
-    // console.log(filteredArray)
     if(filteredArray.length === 0 && filteredSearch.value !== ''){
         let paragraph = document.createElement('p');
+        paragraph.setAttribute('id', 'info')
         paragraph.innerHTML = 'no services found';
         servicesSection.appendChild(paragraph);
     } 
