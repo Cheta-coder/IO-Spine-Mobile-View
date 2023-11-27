@@ -7,9 +7,9 @@
     <script src="https://kit.fontawesome.com/8d19a5e942.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
-<link rel="shortcut icon" href="./IO SPINE LOGO.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./IO SPINE LOGO.png" type="image/x-icon">
 </head>
 <body>
     <div>
@@ -19,10 +19,10 @@
             <nav class="navigation">
                 <ul>
                     <a href="academy.html"><li>Home</li></a>
-                    <li>About</li>
-                    <li>ICT Solutions</li>
-                    <li>Marketplace</li>
-                    <li>Staff Products</li>
+                    <a href=""><li>About</li></a>
+                    <a href=""><li>ICT Solutions</li></a>
+                    <a href=""><li>Marketplace</li></a>
+                    <a href=""><li>Staff Products</li></a>
                 </ul>
             </nav>
             <nav class="mobile-navigation">
@@ -43,48 +43,46 @@
             </section>
             <div class="about">
                 <h2 class="aboutheading">About<span>iospine.com</span></h2>
-                <p>We are Africa's no. 1 technological hub for student-centred education, 
-                    commerce, workforce and innovations.</p>
-                <p>We integrate latest technologies and expertise to bring about seamless 
-                    experiences across our affordable services.</p>
-                <p>Learn with the best, buy the best and reliable products born out of 
-                    innovations, position yourself for the global market place or source 
-                    for the best talents and request for affordable ICT solutions from our network of technologies </p>
-                <p>... manifest your dreams</p>
+                <p class="p1"></p>
+                <p class="p2"></p>
+                <p class="p3"></p>
+                <p class="p4"></p>
             </div>
         </div>
 
 
         <main class="services">
-        <h1>Our Services</h1>
-        <section>
-            <div>
-                <img src="./IMG/Academy.png" alt="Academy Image">
-                <h3 class="service-title">Academy</h3>
-                <p class="service-description">Gain access to exclucisive expert-led courses that are student and hand-on driven.<br> Master your craft and stand out globally with our Master of Practice Certification.</b></p>
-                <button class="learn-more">Learn More</button>
-                <button class="apply-now">Apply Now</button>
-            </div>
-            <div>
-                <img src="./IMG/Marketplace.png" alt="Marketplace Image">
-                <h3 class="service-title">Marketplace</h3>
-                <p class="service-description">Shop for quality and reliable innovative products, ideas, project resources, gadgets, and educational materials.</p>
-                <button class="comming-soon">Coming Soon</button>
-            </div>
-            <div>
-                <img src="./IMG/ICT-Solutions.png" alt="ICT-Solutions Image">
-                <h3 class="service-title">ICT-Solutions</h3>
-                <p class="service-description">Find out and bargain for best deals of the outstanding services we offer. We have an excellent network of professionals in teams to meet your needs.</p>
-                <button class="comming-soon">Coming Soon</button>
-            </div>
-            <div>
-                <img src="./IMG/staff-product.png" alt="Staff-Product Image">
-                <h3 class="service-title">Staff-product</h3>
-                <p class="service-description">See outstanding portfolio of our graduates for your hire and partnership as the case may be.<br><br>
-                    We know and trust them enough to recommend.</p>
-                <button class="comming-soon">Coming Soon</button>
-            </div>
-        </section>
+            <h1>Our Services</h1>
+            <label for="filter">Search Through Our Services</label>
+            <input type="text" name="filter" id="filter" placeholder="Search Here">
+            <section id="ourServices">
+                <!-- <div>
+                    <img src="./IMG/Academy.png" alt="Academy Image">
+                    <h3 class="service-title">Academy</h3>
+                    <p class="service-description">Gain access to exclucisive expert-led courses that are student and hand-on driven.<br> Master your craft and stand out globally with our Master of Practice Certification.</b></p>
+                    <button class="learn-more">Learn More</button>
+                    <button class="apply-now">Apply Now</button>
+                </div>
+                <div>
+                    <img src="./IMG/Marketplace.png" alt="Marketplace Image">
+                    <h3 class="service-title">Marketplace</h3>
+                    <p class="service-description">Shop for quality and reliable innovative products, ideas, project resources, gadgets, and educational materials.</p>
+                    <button class="comming-soon">Coming Soon</button>
+                </div>
+                <div>
+                    <img src="./IMG/ICT-Solutions.png" alt="ICT-Solutions Image">
+                    <h3 class="service-title">ICT-Solutions</h3>
+                    <p class="service-description">Find out and bargain for best deals of the outstanding services we offer. We have an excellent network of professionals in teams to meet your needs.</p>
+                    <button class="comming-soon">Coming Soon</button>
+                </div>
+                <div>
+                    <img src="./IMG/staff-product.png" alt="Staff-Product Image">
+                    <h3 class="service-title">Staff-product</h3>
+                    <p class="service-description">See outstanding portfolio of our graduates for your hire and partnership as the case may be.<br><br>
+                        We know and trust them enough to recommend.</p>
+                    <button class="comming-soon">Coming Soon</button>
+                </div> -->
+            </section>
         </main>
         <footer class="footer">
             <img class="logo" src="./IMG/IO SPINE logo 1.png" alt="IO Spine Logo">
@@ -107,9 +105,10 @@
             </div>
 
             <p class="line"></p>
-            <pre style="font-size: smaller; margin-left: 5%;">&copy; 2023 I/O SPINE. All rights reserved.       ...manifest your dreams</pre>
+            <pre style="font-size: smaller; margin-left: 5%;">&copy; 2023 I/O SPINE. All rights reserved.                   ...manifest your dreams</pre>
         </footer>
     </div>
     <script src="index.js"></script>
+    <script type="module" src="data.js"></script>
 </body>
 </html>
